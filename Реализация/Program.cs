@@ -16,7 +16,7 @@ string[] CreateArray()
     return array;
 }
 
-string[] SortArray(string[] array)
+string[] FilterArray(string[] array)
 {
     int count = 0;
     for (int i = 0; i < array.Length; i++)
@@ -39,3 +39,9 @@ string[] SortArray(string[] array)
     return newArray;
 }
 
+Console.Clear();
+
+string[] array = CreateArray();
+Console.WriteLine(string.Join(", ", array));
+string[] newArray = FilterArray(array);
+Console.WriteLine(string.Join(", ", newArray));
